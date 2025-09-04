@@ -10,7 +10,7 @@ class Ball(Turtle):
         self.shape("circle")
         self.penup()
         self.speed(1)
-        self.setheading(-45)
+        self.setheading(45)
 
     def collision_with_wall(self):
         if self.ycor() > 240 or self.ycor() < -230:
@@ -37,3 +37,9 @@ class Ball(Turtle):
             self.hideturtle()
             return "left"
         return ""
+
+    def start_over(self):
+        self.hideturtle()
+        self.goto(0, 0)
+        self.setheading(45)
+        self.showturtle()
